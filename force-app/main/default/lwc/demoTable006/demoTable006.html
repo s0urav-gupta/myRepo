@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title="Table Demo" icon-name="custom:custom">
+        <div class="slds-m-around medium">
+            <h2></h2>
+            <table border="1">
+                <tr>
+                    <th>Product ID</th>
+                    <th>Product name</th>
+                    <th>Product Price</th>
+                </tr>
+                <tr for:each={products} for:item="prod" key={prod.productId}>
+                    <td>{prod.productId}</td>
+                    <td>{prod.productName}</td>
+                    <td>{prod.productPrice}</td>
+                    <td><lightning-button label="Delete Product" onclick={deleteData}></lightning-button></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <lightning-input label="Enter Product Id" value={pId} onchange={productIdChange}></lightning-input>
+            <lightning-input label="Enter Product Name" value={pName} onchange={productNameChange}></lightning-input>
+            <lightning-input label="Enter Product Price" value={pPrice} onchange={productPriceChange}></lightning-input>
+            <lightning-button label="Add Product" onclick={addProduct}></lightning-button>
+        </div>
+    </lightning-card>
+</template>

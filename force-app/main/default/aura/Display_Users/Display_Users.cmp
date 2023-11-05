@@ -1,0 +1,23 @@
+<aura:component controller="Users">
+    <aura:attribute name="userList" type="User[]" />
+    <aura:handler name="init" value="{!this}" action="{!c.showUsers}" />
+    <div class="center_maker">
+        <h1>Here is the list of active users in the org</h1>
+        <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Username</th>
+                </tr>
+            </thead>
+            <tbody>
+                <aura:iteration items="{!v.userList}" var="userObj">
+                    <tr>
+                        <td>{!userObj.Name}</td>
+                        <td>{!userObj.Username}</td>
+                    </tr>
+                </aura:iteration>
+            </tbody>
+        </table>
+	</div>      
+</aura:component>

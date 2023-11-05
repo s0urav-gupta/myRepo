@@ -1,0 +1,22 @@
+<apex:page standardController="Gadget__c" extensions="gadgetExtensions">
+  
+  <table>
+      <tr>
+          <td>Gadget Name</td><td>-</td><td>{! Gadget__c.Name}</td>
+      </tr>
+      <tr>
+          <td>Gadget Price</td><td>-</td><td>{! Gadget__c.Price__c}</td>
+      </tr>
+  </table>
+  
+  {! accountList}
+  <apex:form >
+      <apex:commandButton value="Save" action="{! foobar}"/>
+  </apex:form>
+  
+  <apex:dataTable value="{! accountList}" var="account">
+      <apex:column value="{! account.Name}" />
+      <apex:column value="{! account.Rating}" />
+      <apex:column value="{! account.Industry}" />
+  </apex:dataTable>
+</apex:page>

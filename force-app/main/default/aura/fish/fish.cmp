@@ -1,0 +1,17 @@
+<aura:component >
+    <aura:attribute name="fishName" type="string" />
+    <aura:attribute name="price" type="Integer" />
+    <aura:attribute name="available" type="boolean" />
+    <div class="{! v.available == true ? 'inStock' : 'nope'}">
+    	<p><span style="color:#b0b0b0">Fishname: </span>{! v.fishName}</p>
+        <p><span style="color:#b0b0b0">Price: </span>${! v.price}</p>
+        <p><span style="color:#b0b0b0">Available? </span>
+        	<aura:if isTrue="{! v.available }">
+            	Yes
+                <aura:set attribute="else">
+                	No
+                </aura:set>
+            </aura:if>
+        </p>
+    </div>
+</aura:component>

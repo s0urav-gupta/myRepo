@@ -1,0 +1,13 @@
+<template>
+        <div class="container-fluid container">
+                <div class="headBody">Create Account Records</div>
+                <div class="formPage">
+                  <lightning-input type="text" label="Account Name" onchange={handleAccName} required></lightning-input>
+                  <lightning-input type="text" label="Account Number" onchange={handlePhone} required></lightning-input>
+                  <hr/>
+                  <lightning-button variant="brand" label="Save" title="Primary action" onclick={handleSave} class="savebutton">
+                  </lightning-button>
+                </div>
+                {accName} {accNumber}
+        </div>
+</template>

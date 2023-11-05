@@ -1,0 +1,7 @@
+<aura:component >
+    
+    <aura:attribute name="greeting" type="String" />
+    
+    {! v.greeting } This is component 4
+    <c:componentFive />
+</aura:component>

@@ -1,0 +1,31 @@
+<apex:page sidebar="false" showHeader="false">
+    <div style="margin:10px; padding:10px;">
+        <h1 style="font-size:20px;">Welome to my first visualforce page.</h1>
+
+        <p>
+            My name is : <b>{!$user.firstname+" "+$user.lastname}</b><br />
+            This is a demo page.<br />
+            The quick brown fox jumps over the lazy dog.
+        </p>
+        <apex:image url="https://images.pexels.com/photos/799443/pexels-photo-799443.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" height="300" width="300" style="float:left; margin-right:10px;"/>
+        <table cellspacing="10">
+            <tr>
+                <td>We</td>
+                <td>can</td>
+            </tr>
+            <tr>
+                <td>also</td>
+                <td>use</td>
+            </tr>
+            <tr>
+                <td>Tables</td>
+                <td>in</td>
+            </tr>
+            <tr>
+                <td>Visualforce</td>
+                <td>pages</td>
+            </tr>
+        </table>
+       
+    </div>
+</apex:page>

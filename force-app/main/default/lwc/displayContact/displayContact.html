@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Contacts">
+        <ul>
+            <template if:true={responseReceived}>
+                <template for:each={contacts.data} for:item="con">
+                    <li key={con.id}>
+                        <div class="slds-p-around_medium lgc-bg">
+                            <lightning-tile type="media">
+                                <lightning-icon slot="media" icon-name="standard:contact"></lightning-icon>
+                                <p class="slds-truncate" title={con.FirstName}>{con.FirstName}&nbsp;{con.LastName}</p>
+                                <p class="slds-truncate" title={con.Email}>{con.Email}</p>
+                                <p class="slds-truncate" title={con.Phone}>{con.Phone}</p>
+                            </lightning-tile>
+                        </div>
+                    </li>
+                </template>
+            </template>
+        </ul>
+    </lightning-card>
+</template>

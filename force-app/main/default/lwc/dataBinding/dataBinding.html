@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Table Demo" icon-name="custom:custom14">
+        <div class="slds-m-around medium">
+            <template for:each={products} for:item="prod" for:index="index">
+                <lightning-card key={prod.Name} title={prod.Name}>
+                    "Product Name : "{prod.Product_Name__c}<br />
+                    "Product Price : "{prod.Product_Price__c}<br /> 
+                    <lightning-button label="Delete Product" onclick={deleteData} value="prod.Name"></lightning-button>
+                </lightning-card>
+            </template>
+        </div>
+    </lightning-card>
+</template>

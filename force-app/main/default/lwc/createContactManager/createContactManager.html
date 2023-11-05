@@ -1,0 +1,14 @@
+<template>
+    <div class="container-fluid container">
+      <div class="headBody">Create Contact Records</div>
+      <div class="formPage">
+        <lightning-input type="text" id="conFirstname" label="Firstname" onchange={handleFName}></lightning-input>
+        <lightning-input type="text" id="conLastname" label="Lastname" onchange={handleLName} required></lightning-input>
+        <lightning-input type="phone" id="conPhone" label="Phone" onchange={handlePhone}></lightning-input>
+        <hr/>
+        <lightning-button variant="brand" label="Save" title="Primary action" onclick={handleSave} class="saveButton">
+        </lightning-button>
+      </div>
+      {fname} {lname} {phone}
+    </div>
+</template>

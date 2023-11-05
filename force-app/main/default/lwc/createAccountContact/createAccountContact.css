@@ -1,0 +1,44 @@
+.container{
+    background-color: #ffffff;
+    padding: 16px;
+    display: block;
+    max-height: 500px;
+    overflow: scroll;
+}
+
+.header{
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+} 
+
+.visible {
+    visibility: visible;
+}
+  
+.not-visible {
+    visibility: hidden;
+}
+
+.save-button{
+    position: relative;
+    top: 75%;
+    left: 49%;
+}
+
+.add-contact-icon{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 23px;
+}
+
+.buttons{
+    cursor: pointer;
+}
+
+th, td{
+    text-align: center;
+    font-size: 1.3rem;
+}

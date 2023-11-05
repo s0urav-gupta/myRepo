@@ -1,0 +1,33 @@
+<apex:page controller="ExploreVFData" action="{! foobar}">
+
+    <!-- First way of fetching data from the object -->
+    <apex:pageBlock >
+        <apex:pageblockTable value="{! accountList}" var="account">
+            <apex:column value="{! account.name}" />
+            <apex:column value="{! account.industry}" />
+            <apex:column value="{! account.rating}" />
+        </apex:pageblockTable>
+    </apex:pageBlock>
+    
+    <!-- Second way of fetching data from the object -->
+    <apex:dataTable value="{! accountList}" var="account">
+        <apex:column value="{! account.name}" />
+        <apex:column value="{! account.industry}" />
+        <apex:column value="{! account.rating}" />
+    </apex:dataTable>
+    
+    <!-- Third way of fetching data from the object -->
+    <apex:dataList value="{! accountList}" var="account">
+        <apex:outputText value="{! account.name}" />
+        <apex:outputText value="{! account.industry}" />
+        <apex:outputText value="{! account.rating}" />
+    </apex:dataList>
+    
+    <!-- Fourth way of fetching data from the object -->
+    <apex:repeat value="{! accountList}" var="account">
+        <apex:outputText value="{! account.name}" />
+        <apex:outputText value="{! account.industry}" />
+        <apex:outputText value="{! account.rating}" />
+    </apex:repeat>
+        
+</apex:page>

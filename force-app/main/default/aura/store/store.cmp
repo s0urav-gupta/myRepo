@@ -1,0 +1,19 @@
+<aura:component controller="FishClass">
+    
+    <aura:attribute name="fish" type="Fish__c[]" />
+    <aura:attribute name="sText" type="String" />
+    
+    <aura:handler name="init" value="{! this}" action="{! c.doInit}" />
+     
+    <div style="width:50%; margin:10px;">
+        <lightning:input value="{! v.sText}" placeholder="Input fish" />
+        <lightning:button label="Search" onclick="{! c.handleSearch}" />
+    </div>
+    
+    <aura:iteration items="{! v.fish}" var="f">
+        
+        <c:fish fishName="{! f.Name }" 
+                price="{! f.Price__c }" 
+                available="{! f.Available__c }" />
+    </aura:iteration>
+</aura:component>

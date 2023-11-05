@@ -1,0 +1,20 @@
+.container{
+    padding: 15px;
+    overflow-y: visible;
+}
+
+.header{
+    font-size: 20px;
+    margin: 5px 0px 0px 10px;
+    font-weight: bold;
+}
+
+.button{
+    float: right;
+    position: relative;
+    top: -20px;
+}
+
+lightning-input{
+    margin-bottom: 10px;
+}

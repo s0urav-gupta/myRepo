@@ -1,0 +1,11 @@
+<template>
+    <div class="container">
+        <template if:true={responseReceived}>
+            <template for:each={accounts.data} for:item="acc">
+                <div key={acc.id}>
+                    <p>{acc.Name} {acc.AccountNumber}</p>
+                </div>
+            </template>
+        </template>
+    </div>
+</template>

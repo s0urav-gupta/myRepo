@@ -1,0 +1,14 @@
+<apex:page controller="ExploreInnerQuery" action="{! fetchRecord}">
+    
+    <apex:dataTable value="{! accountList }" var="account">
+        <apex:column value="{! account.Name}" />
+        <apex:column value="{! account.Rating}" />
+        <apex:column value="{! account.Industry}" />
+        <apex:column >
+            <apex:repeat value="{! account.contacts}" var="accountContact" >
+                - <apex:outputText >{! accountContact.Firstname}</apex:outputText><br />
+                - <apex:outputText >{! accountContact.Lastname}</apex:outputText><br />
+            </apex:repeat>
+        </apex:column>
+    </apex:dataTable>
+</apex:page>

@@ -1,0 +1,19 @@
+.THIS {
+    margin:0px;
+    padding:0px;
+}
+.THIS.center_maker{
+	width:500px;
+    margin:auto;
+    font-size: 16px;
+}
+.THIS H1 {
+    font-size: 24px;
+    margin: 10px 0px 30px 0px;
+    font-weight:bold;
+    background-color: #c4b0ff;
+    padding:20px;
+}
+.THIS table tr th, .THIS table tr td{
+    padding: 13px;
+}

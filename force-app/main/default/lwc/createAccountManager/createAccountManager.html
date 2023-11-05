@@ -1,0 +1,20 @@
+<template>
+    <lightning-card>
+        <div class="header">Create Account Record</div>
+        <div class="container">
+            <div class="slds-form-element">
+                <div class="slds-form-element__control">
+                    <lightning-input type="text" label="Account Name" onchange={handleName} required></lightning-input>
+                    <lightning-input type="phone" label="Phone" onchange={handlePhone}></lightning-input>
+                    <template if:true={IndustryValues.data}>
+                        <lightning-combobox name="progress" label="Industry" value={value}
+                            options={IndustryValues.data.values} onchange={handleIndustry}>
+                        </lightning-combobox>
+                    </template><hr/>
+                    <lightning-button type="button" class="button" label="Save" variant="brand" onclick={createAccount}></lightning-button>
+                    {name} {phone} {indus}
+                </div>
+            </div>
+        </div>
+    </lightning-card>
+</template>

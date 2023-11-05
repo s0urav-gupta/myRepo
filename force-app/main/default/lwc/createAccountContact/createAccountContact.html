@@ -1,0 +1,71 @@
+<template>
+    <lightning-card>
+        <div class="header">Create Account</div>
+        <div class="container">
+            <div class="slds-form-element">
+                <div class="slds-grid slds-gutters">
+                    <div class="slds-col">
+                        <lightning-input type="text" label="Account Name" value={name} onchange={handleName} required></lightning-input>
+                        <lightning-input type="phone" label="Phone" value={phone} onchange={handlePhone}></lightning-input>
+                    </div>
+                    <div class="slds-col">
+                        <template if:true={IndustryPicklistValues.data}>
+                            <lightning-combobox name="industry" label="Industry" value={industry} options={IndustryPicklistValues.data.values} onchange={handleIndustry}></lightning-combobox>
+                        </template>
+                        <template if:true={TypePicklistValues.data}>
+                            <lightning-combobox name="type" label="Type" value={type} options={TypePicklistValues.data.values} onchange={handleType}></lightning-combobox>
+                        </template>
+                    </div>
+                </div>
+                <br/>
+                <lightning-button type="button" class="save-button" label="Save" variant="brand" onclick={createAccount}></lightning-button>
+                <lightning-button type="button" class={createContactVisibility} label="Create Contact" variant="neutral" onclick={addContactLayout}></lightning-button>
+                
+                <template if:true={addContact}>
+                    <div class="header">Create Contacts</div>
+                    <div class="slds-grid slds-gutters">
+                        <div class="slds-col">
+                            <lightning-input type="text" label="Firstname" value={conFirstName} onchange={handleFirstname}></lightning-input>
+                        </div>
+                        <div class="slds-col">
+                            <lightning-input type="text" label="Lastname" value={conLastName} onchange={handleLastname} required></lightning-input>
+                        </div>
+                        <div class="slds-col">
+                            <lightning-input type="text" label="E-mail" value={conEmail} onchange={handleEmail} required></lightning-input>
+                        </div>
+                        <div class="add-contact">
+                            <!--<lightning-icon icon-name="action:add_relationship" alternative-text="Add Contact" title="Add Contact" class="add-contact-icon"></lightning-icon>-->
+                            <lightning-button variant="neutral" label="Add" onclick={pushContacts} class="add-contact-icon" title="add_contact"></lightning-button>
+                        </div>
+                    </div>
+                    <br />
+                    <template if:true={flag}>
+                        <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                            <thead>
+                                <tr class="slds-line-height_reset">
+                                    <th>FirstName</th>
+                                    <th>LastName</th>
+                                    <th>E-mail</th>
+                                    <th colspan="2">Edit or Delete</th>
+                                </tr>
+                            </thead>
+                            <template for:each={contactList} for:item="con">
+                                <tbody key={con.key}>
+                                    <tr>
+                                        <td>{con.firstname}</td>
+                                        <td>{con.lastname}</td>
+                                        <td>{con.email}</td>
+                                        <td><lightning-icon icon-name="action:edit" alternative-text="Add Contact" title="Add Contact" class="buttons"></lightning-icon></td>
+                                        <td><lightning-icon icon-name="action:delete" alternative-text="Add Contact" title="Add Contact" class="buttons"></lightning-icon></td>
+                                    </tr>
+                                </tbody>
+                            </template>
+                        </table>
+                    </template>
+                    <br />
+                    <lightning-button type="button" class="done-button" label="Done" variant="neutral" onclick={closeContactForm}></lightning-button>
+                </template>
+            </div>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,8 @@
+<apex:page controller="thirdPageController">
+  {! message }
+  
+  <apex:form >
+        <apex:commandButton value="Invoke Method" action="{! foobar }" />
+  </apex:form>
+
+</apex:page>

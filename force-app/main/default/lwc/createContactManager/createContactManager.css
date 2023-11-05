@@ -1,0 +1,23 @@
+.container{
+    background-color: #ffffff;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.headBody{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.saveButton{
+    float: right;
+    margin: 0px 5px 5px 0px;
+}
+
+.formPage{
+    padding:5px
+}
+
+lightning-input{
+    margin-bottom: 10px;
+}

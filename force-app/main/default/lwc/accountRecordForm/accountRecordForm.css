@@ -1,0 +1,15 @@
+.container{
+    background-color: #ffffff;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.headBody{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.savebutton{
+    float: right;
+    margin: 0px 10px 0px 0px; 
+}
